@@ -1,0 +1,82 @@
+.list{
+    text-align: left;
+}
+.green{
+    color: #007C7C;
+}
+.large{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.para{
+    font-size: 20px;
+}
+li{
+    margin: 4px;
+}
+.p-1{
+    text-align: left;
+    font-size: 23px;
+}
+.symptoms{
+    background-color: #EBFEFF;
+}
+.btn-1{
+    background-color: #007C7C;
+    color: white;
+}
+.btn-1:hover{
+    color: orange;
+}
+label{
+    text-align: left;
+}
+
+
+.message {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: right;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    height: 300px; /* Set the maximum height as needed */
+}
+
+.cont-2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    height: 300px; /* This height defines the allotted space */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.col-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-c {
+    text-align: center; /* For center alignment of text */
+}
+.bq{
+    font-weight: 650;
+    color: #007C7C;
+}
+.report-form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

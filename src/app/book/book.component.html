@@ -1,0 +1,53 @@
+<div class="con p-5 mt-2">
+    <div class="card card-1 shadow-sm p-3 mb-5 bg-white rounded p-4">
+        <div class="text-center">
+            <h3 class="top-tit">{{center?.name}}</h3>
+            <p class="top-loc">{{center?.location}}</p>
+        </div>
+        <div class="details mt-4">
+           <div class="form ">
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="form-group">
+                    <label for="id">Mobile Number</label>
+                    <input type="text" class="form-control mt-2 mb-2" name="id" ngModel #id="ngModel" placeholder="Enter Your Mobile number" required pattern="[0-9]*" (ngModelChange)="idErr($event)">
+                    <div *ngIf="id.errors && id.touched" class="text-danger">
+                        <div *ngIf="id.errors?.['required']">
+                            This Field is Required
+                        </div>
+                        <div *ngIf="id.errors?.['pattern']">
+                            Enter Valid Mobile number
+                        </div>
+                        <div *ngIf="id.errors?.['invalidId']">
+                            Enter Valid Mobile number
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" ngModel #name="ngModel" required class="form-control mt-2 mb-2" pattern="[a-zA-Z ]*" maxlength="25" (ngModelChange)="nameErr($event)" placeholder="Enter Your Name">
+                    <div *ngIf="name.errors && name.touched" class="text-danger">
+                        <div *ngIf="name.errors?.['required']">
+                            This field is required
+                        </div>
+                        <div *ngIf="name.errors?.['pattern']">
+                            Enter a valid name
+                        </div>
+                        <div *ngIf="name.errors?.['invalidName']">
+                            Enter a valid name
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="DOB">Date of Vaccination</label>
+                    <input type="date" class="form-control mt-2 mb-2" name="DOB" ngModel #DOB="ngModel" required  [min]="calculateMinDate()" [max]="calculateMaxDate()">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+                </div>
+            </form>
+           </div>
+        </div>
+    </div>
+</div>

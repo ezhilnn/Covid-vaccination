@@ -1,0 +1,18 @@
+.c-1 {
+    background-color: #015158;
+    color: white;
+    min-height: 40px;
+    display: flex;
+    align-items: center; /* Vertically center-align the content */
+    justify-content: center; /* Horizontally center-align the content */
+    text-align: center;
+}
+.c-2{
+    background-color: #007C7C;
+    padding: 30px;
+    color: white;
+}
+.c-2 h6:hover{
+    cursor: pointer;
+    color: orange;
+}

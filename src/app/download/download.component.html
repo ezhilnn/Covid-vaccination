@@ -1,0 +1,148 @@
+<div class="report-form mt-5 mb-10 p-5">
+    <div class="heading text-center large green">
+        <h2>Download Your Vaccination Certiicate</h2>
+    </div>
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" ngModel #name="ngModel" required pattern="[a-zA-Z ]*" class="form-control mt-2 mb-2"
+                placeholder="Enter Your Name" (ngModelChange)="nameErr($event)">
+            </div>
+            <div *ngIf="name.invalid && name.touched" class="text-danger">
+                <div *ngIf="name.errors?.['required']">
+                    This Field is Required
+                </div>
+                <div *ngIf="name.errors?.['pattern']">
+                    Only charcters and spaces are allowed
+                </div>
+                <div *ngIf="name.errors?.['len'] ">
+                    Name should be in the length of 5 to 20
+                </div>
+            </div>
+            <div class="form-group mt-4">
+                <label for="Mobile number">Mobile Number</label>
+                <input type="text" name="number" ngModel #number="ngModel" required pattern="[0-9]*" class="form-control mt-2 mb-2" placeholder="Enter Your Mobile Number" (ngModelChange)="numErr($event)">
+            </div>
+            <div *ngIf="number.invalid && number.touched" class="text-danger">
+                <div *ngIf="number.errors?.['required']">
+                    This Field is Required
+                </div>
+                <div *ngIf="number.errors?.['pattern']">
+                    Only Numbers are allowed
+                </div>
+                <div *ngIf="number.errors?.['lenm']">
+                    Number should be in the length of 10
+                </div>
+            </div>
+            
+            <div class="form-group mt-4">
+                <label for="EmailAddress">Email Address</label>
+                <input type="email" id="EmailAddress" name="email" ngModel #email="ngModel"
+                  required class="form-control mt-2 mb-2" placeholder="Enter Your Email Address"
+                  (ngModelChange)="emailErr($event)">
+              </div>
+              <div *ngIf="email.invalid && email.touched" class="text-danger">
+                <div *ngIf="email.errors?.['required']">
+                  This Field is Required
+                </div>
+                <div *ngIf="email.errors?.['email']">
+                  Please enter a valid email address
+                </div>
+                <div *ngIf="email.errors?.['len']">
+                  Email should have a maximum length of 100 characters
+                </div>
+              </div>
+              
+            
+
+            <div class="form-group mt-4">
+                <label for="date">Vaccinated Date</label>
+                <input type="date" name="date" ngModel #date="ngModel" required class="form-control mt-2 mb-2" [max]="maxDate()" [min]="getMinDate()" >
+            </div>
+            <div class="form-group mt-4">
+                <label for="center">Vaccinated Center</label>
+                <input type="text" name="center" ngModel #center="ngModel" required pattern="[0-9]*" class="form-control mt-2 mb-2" placeholder="Enter the center Id" (ngModelChange)="cErr($event)">
+            </div>
+            <div *ngIf="center.invalid && center.touched" class="text-danger">
+                <div *ngIf="center.errors?.['required']">
+                    This Field is Required
+                </div>
+                <div *ngIf="center.errors?.['pattern']">
+                    Only Numbers are allowed
+                </div>
+                <div *ngIf="center.errors?.['lenc']">
+                    Enter a valid center number
+                </div>
+            </div>
+            <!-- <div class="form-group mt-4">
+                <label for="">Describe ypur problem here</label>
+                <textarea name="problem" ngModel #problem="ngModel" cols="30" rows="4" class="form-control" required pattern="[A-Za-z ]*" (ngModelChange)="prErr($event)"></textarea>
+            </div>
+            <div *ngIf="problem.invalid && problem.touched" class="text-danger">
+                <div *ngIf="problem.errors?.['required']">
+                    This Field is Required
+                </div>
+                <div *ngIf="problem.errors?.['pattern']">
+                    Only characters and spaces are allowed
+                </div>
+                <div *ngIf="problem.errors?.['lenp']">
+                    You should enter minimum 40 charcters and maximum 300 characters
+                </div>
+            </div> -->
+            <div class="text-center mt-4">
+                <button class="btn btn-1" [disabled]="f.invalid">submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- <div class="container p-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-3 text-center">
+            <img src="https://www.pmindia.gov.in/wp-content/uploads/2023/12/01-01.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-12 col-md-9">
+            <div class="msg-container">
+                <div class="message">
+                    <p>Dear Fellow Citizens,</p>
+            <p>Amidst the global crisis, the need for COVID vaccination is paramount. Each one of us plays a crucial role in
+                battling this pandemic. Let's exercise patience and determination. Science may not have an absolute solution
+                yet, but our cautious actions are our shield.</p>
+            <p>Stay cautious and book your vaccination slot responsibly. Let's ensure our safety by keeping social distance,
+                limiting outings, and following guidelines. This vaccination campaign requires our collective effort.</p>
+            <p>On the vaccination day, show gratitude to our frontline warriors at 5 PM from your doorways. Let's support and
+                protect those risking their lives for us.</p>
+            <p>Remember, our economy and essential services are impacted. Be empathetic towards service providers and
+                maintain calm while purchasing essentials.</p>
+            <p>Together, we will overcome this global challenge. Book your vaccine slot, stay vigilant, and join in
+                protecting our nation's health.</p>
+            <p>Your cooperation is the key to our victory against this pandemic.</p>
+            <p>Stay safe and stay strong!</p>
+                </div>
+                <div class="signature">
+                    <p>- Prime Minister Narendra Modi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="container cont-2">
+    <div class="row">
+        <div class="col-4">
+            <img src="https://www.pmindia.gov.in/wp-content/uploads/2022/12/Modi-Ji-Photo-02-e1647325936821.jpg" alt="" width="100%" height="300px">
+        </div>
+        <div class="col-8">
+            <div class="text-center t-c ">
+                <blockquote class="bq">"In this global crisis, COVID vaccination stands as our utmost priority. Every individual holds a pivotal role in this battle. Let's embrace patience and caution as our armor against this uncertainty. Responsible booking of vaccination slots and unwavering support for frontline heroes are crucial. Empathy towards service providers is essential amidst the impact on our economy and essential services. Together, by adhering to safety measures and guidelines, we shall overcome this challenge. Your cooperation is the linchpin in our collective victory against this pandemic. Stay resolute, stay safe, and stand strong. Our unified efforts pave the way for a healthier and brighter future for all."
+                <div class="signature">
+                    <i>- Prime Minister Narendra Modi</i>
+                </div></blockquote>
+            </div>
+        </div>
+    </div>
+</div>

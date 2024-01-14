@@ -1,0 +1,16 @@
+{
+  "routes": [
+    "/",
+    "/admin",
+    "/admin-log",
+    "/centers",
+    "/citizen-login",
+    "/download",
+    "/FAQ",
+    "/more",
+    "/profile",
+    "/register-signIn",
+    "/report",
+    "/sign-up"
+  ]
+}

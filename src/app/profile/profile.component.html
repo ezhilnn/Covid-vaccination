@@ -1,0 +1,121 @@
+<div class="c-1 ">
+    <div class="card card-1 shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="name d-flex mt-3">
+            <img src="https://selfregistration.cowin.gov.in/assets/images/icon-man.svg" alt="" width="40px" height="40px">
+            <h5 class="nm">UserName</h5>
+        </div>
+        <div class="info mt-3 mb-4" >
+            <div class="col-4 text-center">
+                <div class="topic">
+                    MOBILE NUMBER
+                </div>
+                <div class="content">
+                    9898789658
+                </div>
+            </div>
+            <div class="col-4 text-center">
+                <div class="topic">
+                    AADHAR NUMBER
+                </div>
+                <div class="content">
+                    898559858957
+                </div>
+            </div>
+            <div class="col-4 text-center">
+                <div class="topic">
+                    AGE
+                </div>
+                <div class="content">
+                    20
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="card card-1 shadow-sm p-3 mb-5 bg-white rounded">
+            <div class="bookings mt-3 mb-4">
+                <div class="bk d-flex">
+                    <img src="https://img.freepik.com/free-vector/appointment-booking-with-calendar_52683-40492.jpg?size=626&ext=jpg" alt="" width="40px" height="40px">
+                    <h5 class="nm">Your Bookings</h5>
+                </div>
+                
+                <div *ngIf="anyBooking">
+                <div
+                    class="table-responsive mt-5"
+                >
+                    <table
+                        class="table table-striped text-center"
+                    >
+                        <thead>
+                            <tr>
+                                <th scope="col">Center</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Center 1</td>
+                                <td>12/12/2023</td>
+                                <td><button class="btn btn-danger">cancel</button></td>
+                            </tr>
+                            <tr class="text-center">
+                                <td scope="row">Center 1</td>
+                                <td>12/12/2023</td>
+                                <td><button class="btn btn-danger">cancel</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                <div *ngIf="!anyBooking" class="text-center mt-4 mb-3">
+                    <h4>No bookings yet</h4>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="card card-1 shadow-sm p-3 mb-5 bg-white rounded">
+            <div class="status">
+                <div class="vac d-flex">
+                    <img src="https://img.freepik.com/free-photo/fun-3d-illustration-cartoon-teenage-girl_183364-81045.jpg?size=626&ext=jpg" alt="" height="40px" width="40px">
+                    <h5 class="nm">Vaccination Status</h5>
+                </div>
+                <div *ngIf="isVaccinated">
+                    <div
+                        class="table-responsive mt-5"
+                    >
+                        <table
+                            class="table table-striped text-center"
+                        >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Dose</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Center</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">Dose 1</td>
+                                    <td>12/12/2023</td>
+                                    <td>Center 1</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Dose 1</td>
+                                    <td>12/12/2023</td>
+                                    <td>Center 1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    <div *ngIf="!isVaccinated" class="text-center mt-4 mb-3">
+                        <h4>Not yet Vaccinated</h4>
+                        <h6>Please get Vaccinated as soon as possible</h6>
+                    </div>
+            </div>
+        </div>
+        
+    </div>

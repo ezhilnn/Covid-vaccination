@@ -1,0 +1,100 @@
+<div class="symptoms text-center w-100 p-5">
+    <div class="container">
+        <div class="heading green large mb-5">
+            <h1>Common Symptoms After COVID-19 Vaccine</h1>
+        </div>
+    <p class="para p-1">After receiving the COVID-19 vaccine, you might experience some common side effects. These usually subside within a few days. The following are common symptoms:</p>
+    <div class="list para pl-5 pr-5">
+        <ol>
+            <li>Fatigue: Feeling tired or lethargic.</li>
+            <li>Headache: Mild to moderate headaches.</li>
+            <li>Chills or Fever: Experiencing mild fever or chills.</li>
+            <li>Muscle or Joint Pain: Aching muscles or joints.</li>
+            <li>Injection Site Reactions: Soreness, redness, or swelling at the injection site.</li>
+            <li>Nausea: Feeling queasy or experiencing mild gastrointestinal symptoms.</li>
+            <li>Other Flu-like Symptoms: Such as runny nose, cough, or sore throat.</li>
+          </ol>
+    </div>
+    </div>
+</div>
+
+<div class="report-form mt-5">
+    <div class="heading text-center large green">
+        <h2>Report Your Problem here</h2>
+    </div>
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" ngModel #name="ngModel" required pattern="[a-zA-Z ]*" class="form-control mt-2 mb-2"
+                placeholder="Enter Your Name" (ngModelChange)="nameErr($event)">
+            </div>
+            <div *ngIf="name.invalid && name.touched" class="text-danger">
+                <div *ngIf="name.errors?.['required']">
+                    This Field is Required
+                </div>
+                <div *ngIf="name.errors?.['pattern']">
+                    Only charcters and spaces are allowed
+                </div>
+                <div *ngIf="name.errors?.['len'] ">
+                    Name should be in the length of 5 to 20
+                </div>
+            </div>
+            <div class="form-group mt-4">
+                <label for="Mobile number">Mobile Number</label>
+                <input type="text" name="number" ngModel #number="ngModel" required pattern="[0-9]*" class="form-control mt-2 mb-2" placeholder="Enter Your Mobile Number" (ngModelChange)="numErr($event)">
+            </div>
+            <div *ngIf="number.invalid && number.touched" class="text-danger">
+                <div *ngIf="number.errors?.['required']">
+                    This Field is Required
+                </div>
+                <div *ngIf="number.errors?.['pattern']">
+                    Only Numbers are allowed
+                </div>
+                <div *ngIf="number.errors?.['lenm']">
+                    Number should be in the length of 10
+                </div>
+            </div>
+            
+            <div class="form-group mt-4">
+                <label for="date">Vaccinated Date</label>
+                <input type="date" name="date" ngModel #date="ngModel" required class="form-control mt-2 mb-2" [max]="maxDate()" [min]="getMinDate()" >
+            </div>
+            <div class="form-group mt-4">
+                <label for="center">Vaccinated Center</label>
+                <input type="text" name="center" ngModel #center="ngModel" required pattern="[0-9]*" class="form-control mt-2 mb-2" placeholder="Enter the center Id" (ngModelChange)="cErr($event)">
+            </div>
+            <div *ngIf="center.invalid && center.touched" class="text-danger">
+                <div *ngIf="center.errors?.['required']">
+                    This Field is Required
+                </div>
+                <div *ngIf="center.errors?.['pattern']">
+                    Only Numbers are allowed
+                </div>
+                <div *ngIf="center.errors?.['lenc']">
+                    Enter a valid center number
+                </div>
+            </div>
+            <div class="form-group mt-4">
+                <label for="">Describe your problem here</label>
+                <textarea name="problem" ngModel #problem="ngModel" cols="30" rows="4" class="form-control" required pattern="[A-Za-z ]*" (ngModelChange)="prErr($event)"></textarea>
+            </div>
+            <div *ngIf="problem.invalid && problem.touched" class="text-danger">
+                <div *ngIf="problem.errors?.['required']">
+                    This Field is Required
+                </div>
+                <div *ngIf="problem.errors?.['pattern']">
+                    Only characters and spaces are allowed
+                </div>
+                <div *ngIf="problem.errors?.['lenp']">
+                    You should enter minimum 40 charcters and maximum 300 characters
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-1" [disabled]="f.invalid">submit</button>
+            </div>
+        </form>
+    </div>
+</div>

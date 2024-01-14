@@ -1,0 +1,33 @@
+.list{
+    text-align: left;
+}
+.green{
+    color: #007C7C;
+}
+.large{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.para{
+    font-size: 20px;
+}
+li{
+    margin: 4px;
+}
+.p-1{
+    text-align: left;
+    font-size: 23px;
+}
+.symptoms{
+    background-color: #EBFEFF;
+}
+.btn-1{
+    background-color: #007C7C;
+    color: white;
+}
+.btn-1:hover{
+    color: orange;
+}
+label{
+    text-align: left;
+}

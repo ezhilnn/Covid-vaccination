@@ -1,0 +1,53 @@
+/* .cont{
+    padding: 40px;
+    background-color: #EBFEFF;
+}
+.table{
+    background-color: #EBFEFF;
+}
+.input-group-append {
+    margin-left: 10px; 
+  } */
+
+  .cont {
+    padding: 40px;
+    background-color: #EBFEFF;
+    margin-top: 30px;
+  }
+  
+  .table {
+    background-color: #EBFEFF;
+  }
+  
+  .input-group-append button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .input-group-append button:hover {
+    background-color: #004080; /* Darker shade on button hover */
+    border-color: #004080;
+  }
+  
+  .table {
+    background-color: #EBFEFF;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #c6e2ff;
+  }
+  
+  .table th,
+  .table td {
+    color: #004080;
+    vertical-align: middle; /* Align content vertically in the middle */
+  }
+  
+  .table th {
+    background-color: #d9eaf7;
+  }
+  .img-1{
+    max-height: 800px;
+  }
+  
+  

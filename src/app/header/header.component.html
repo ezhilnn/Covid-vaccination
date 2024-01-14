@@ -1,0 +1,42 @@
+<header class="header-container shadow-sm w-100">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-1 col-md-2">
+        <div class="row">
+          <a href="" class="d-block col-6">
+            <img src="https://i.ibb.co/JFSdgsT/Group-1-1.png" class="img-fluid" alt="Logo">
+          </a>
+           <div class="h5 links col-6"><a href="/"><img src="https://i.ibb.co/7kK2NFW/Group-2.png" alt="Group-2" border="0" height="65px" width="80px"></a>
+          </div>
+        </div>
+      </div>
+      <div class="header-links my-4 d-flex justify-content-around col-10 col-md-8">
+        <div class="h5 links" routerLink="/">HOME</div>
+        <div class="h5 links" routerLink="/FAQ">FAQs</div>
+        <div class="h5 links" routerLink="/centers">Book Slot</div>
+        <div class="h5 links" routerLink="/download">Download</div>
+      </div>
+      <div class="col-1 text-md-end col-md-2 d-flex justify-content-md-between align-items-center" *ngIf="!isAuth">
+        <div class="d-flex w-100 justify-content-around gap-1">
+          <!-- <button class="btn btn-primary flex-grow-1 me-2">Log In</button> -->
+          <button class="btn btn-outline-secondary flex-grow-1" routerLink="/register-signIn">Register/SignIn</button>
+        </div>
+      </div>
+
+      <div class="col-1 text-md-end col-md-2 d-flex justify-content-md-end align-items-center" *ngIf="isAuth">
+        <div class="d-flex align-items-center">
+          <div class="me-3">
+            <!-- Replace the below span with your profile icon -->
+            <!-- <span class="fa fa-user-circle fs-3 text-primary"></span> -->
+            <button class="btn btn-outline-secondary" style="min-width: 100px;" routerLink="/profile">Profile</button>
+          </div>
+          <div>
+            <button class="btn btn-outline-secondary" style="min-width: 100px;" (click)="logout()">Log Out</button>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</header>

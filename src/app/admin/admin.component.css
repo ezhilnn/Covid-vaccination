@@ -1,0 +1,42 @@
+.c-1{
+    padding: 55px;
+}
+.card-1{
+    border: 1px solid rgb(245, 242, 242);
+}
+.nm{
+    margin-left: 20px;
+    font-weight: 600;
+}
+.name{
+    align-items: center;
+}
+.info{
+    display: flex;
+    width: 80%;
+    margin-left: 7%;
+}
+.topic{
+    color: gray;
+    font-size: 18px;
+    font-weight: 600;
+}
+.content{
+    color: black;
+    font-size: 17px;
+}
+.book{
+    margin-left: 60px;
+    font-weight: 600;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid rgb(231, 220, 220);
+}
+.c-1{
+    margin: 5px;
+}
+.h-1{
+    font-weight: bolder;
+    font-size: larger;
+}

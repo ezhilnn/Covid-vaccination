@@ -1,0 +1,12 @@
+.vac{
+    margin-top: 10px;
+    height: 50px;
+    background-color: #007C7C;
+    color: white;
+    font-weight: bold;
+}
+.btn-1{
+    background-color: #FCBF02;
+    border-radius: 20px;
+    border: 1px solid white;
+}

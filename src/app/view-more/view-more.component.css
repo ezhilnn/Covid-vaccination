@@ -1,0 +1,94 @@
+.green{
+    color: #007C7C;
+}
+.large{
+    font-size: 25px;
+    font-weight: bold;
+}
+.bg-1{
+    background-color:#E2F5F5 ;
+    height: 100%;
+}
+.card{
+    padding: 0;
+    margin: 20px;
+    height: 160px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.card-title{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    margin-top: 20px;
+}
+.dashboard{
+    margin-top: 10px;
+    padding: 10px;
+}
+.vaccination{
+    background-color: #E1EFFB;
+}
+.blue{
+    color: rgb(9, 63, 163);
+}
+.dash{
+    color: #007C7C;
+    font-weight: bolder;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+
+}
+.orange{
+   color: #e29548;
+}
+.centers{
+    background-color: #FFE8D1;
+}
+.pink{
+    color: #9137da;
+}
+.certificates{
+    background-color: #F3E1F3;
+}
+.doctors{
+    background-color:#FEF7DF ;
+}
+.yellow{
+    color: rgb(223, 158, 60);
+}
+.cases{
+    background-color: #f79898;
+}
+.gr{
+    color: #df1212;
+}
+.cont-2 {
+    margin-bottom: 30px;
+    height: 300px; /* This height defines the allotted space */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.col-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-c {
+    text-align: center; /* For center alignment of text */
+}
+.bq{
+    font-weight: 650;
+    color: #007C7C;
+}

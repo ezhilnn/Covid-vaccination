@@ -1,0 +1,53 @@
+.steps{
+    background-color: #EBFEFF;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.green{
+    color: #007C7C;
+}
+.large{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.card {
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Ensure content doesn't extend beyond card boundaries */
+    margin-bottom: 10px;
+}
+
+.col-3{
+    margin-left: 5%;
+}
+.row{
+    margin-top: 15px;
+}
+.card-title{
+    font-weight: bold;
+    margin: 5px;
+    height: 20%;
+}
+.card-img-top{
+    margin-top: 5px;
+    min-height: 138px;
+    height: 254px;
+}
+.img{
+    height: 100%;
+}
+.card-text{
+    background-color:#007C7C ;
+    height: 70px;
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.inner:hover{
+    cursor: pointer;
+    font-size: 15px;
+    color: orange;
+  }
+  
