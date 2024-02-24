@@ -1,0 +1,20 @@
+<form #centerForm="ngForm" (ngSubmit)="onSubmit(centerForm)">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" ngModel required>
+    </div>
+    <div>
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" ngModel required>
+    </div>
+    <div>
+      <label for="totalSlots">Total Slots:</label>
+      <input type="number" id="totalSlots" name="totalSlots" ngModel required>
+    </div>
+    <div>
+      <label for="availableSlots">Available Slots:</label>
+      <input type="number" id="availableSlots" name="availableSlots" ngModel required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  

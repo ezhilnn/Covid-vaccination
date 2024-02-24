@@ -1,0 +1,21 @@
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Total Slots</th>
+        <th>Available Slots</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let center of centers">
+        <td>{{ center.id }}</td>
+        <td>{{ center.name }}</td>
+        <td>{{ center.location }}</td>
+        <td>{{ center.total_slots }}</td>
+        <td>{{ center.available_slots }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

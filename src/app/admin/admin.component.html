@@ -37,16 +37,43 @@
             <h5 class="nm">Add Center</h5>
            
         </div>
-        <div class="container c-1">
+        <div class=" c-1 text-center">
             <div class="text-center h-1">Add a Center</div>
-            <form action="" #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
                 <div class="form-group">
-                    <label for="id">Center Id</label>
-                    <div class="form-control">
-                        <input type="text">
-                    </div>
+                  <label for="id">Center Id</label>
+                  <div class="form-control">
+                    <input type="text" class="form-control mt-3 mb-2" required name="id" ngModel #id="ngModel" placeholder="Enter Center Id">
+                  </div>
                 </div>
-            </form>
+                <div class="form-group">
+                  <label for="name">Center Name</label>
+                  <div class="form-control">
+                    <input type="text" class="form-control mt-3 mb-2" required name="name" ngModel #name="ngModel" placeholder="Enter Center Name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="location">Location</label>
+                  <div class="form-control">
+                    <input type="text" class="form-control mt-3 mb-2" required name="location" ngModel #location="ngModel" placeholder="Enter Location">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="totalSlots">Total Slots</label>
+                  <div class="form-control">
+                    <input type="number" class="form-control mt-3 mb-2" required name="totalSlots" ngModel #totalSlots="ngModel" placeholder="Enter Total Slots">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="availableSlots">Available Slots</label>
+                  <div class="form-control">
+                    <input type="number" class="form-control mt-3 mb-2" required name="availableSlots" ngModel #availableSlots="ngModel" placeholder="Enter Available Slots">
+                  </div>
+                </div>
+                <!-- Repeat the following structure for each form field -->
+                <button class="btn btn-1 mt-2 mb-10 btn-primary" [disabled]="f.invalid">Submit</button>
+              </form>
+              
         </div>
     </div>
 </div>

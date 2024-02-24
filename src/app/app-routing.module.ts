@@ -13,6 +13,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BookComponent } from './book/book.component';
 import { AdminComponent } from './admin/admin.component';
+import { CitiSignupComponent } from './citi-signup/citi-signup.component';
 
 const routes: Routes = [
   {
@@ -45,7 +46,7 @@ const routes: Routes = [
     component:CitizenLoginComponent
   },{
     path:'sign-up',
-    component:SignUpComponent
+    component:CitiSignupComponent //signupcomponent
   },{
     path:'profile',
     component:ProfileComponent
@@ -55,6 +56,9 @@ const routes: Routes = [
   },{
     path:'admin',
     component:AdminComponent
+  },{
+    path:'citi-sign',
+    component:CitiSignupComponent
   }
 ];
 

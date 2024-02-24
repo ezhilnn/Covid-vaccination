@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="mobile_number">Mobile Number:</label>
+      <input type="text" id="mobile_number" name="mobile_number" [(ngModel)]="mobile_number" required>
+    </div>
+    <div>
+        <div>
+            <label for="vaccination_date">Vaccination Date:</label>
+            <input type="date" id="vaccination_date" name="vaccination_date" [(ngModel)]="vaccination_date" (change)="onDateChange($event)" required>
+
+
+
+
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+</form>

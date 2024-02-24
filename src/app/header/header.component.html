@@ -16,13 +16,13 @@
         <div class="h5 links" routerLink="/centers">Book Slot</div>
         <div class="h5 links" routerLink="/download">Download</div>
       </div>
-      <div class="col-1 text-md-end col-md-2 d-flex justify-content-md-between align-items-center" *ngIf="!isAuth">
+      <div class="col-1 text-md-end col-md-2 d-flex justify-content-md-between align-items-center" *ngIf="!isAuth && !isAuthAdmin">
         <div class="d-flex w-100 justify-content-around gap-1">
           <!-- <button class="btn btn-primary flex-grow-1 me-2">Log In</button> -->
           <button class="btn btn-outline-secondary flex-grow-1" routerLink="/register-signIn">Register/SignIn</button>
         </div>
       </div>
-
+      
       <div class="col-1 text-md-end col-md-2 d-flex justify-content-md-end align-items-center" *ngIf="isAuth">
         <div class="d-flex align-items-center">
           <div class="me-3">
@@ -36,6 +36,18 @@
         </div>
       </div>
       
+      <div class="col-1 text-md-end col-md-2 d-flex justify-content-md-end align-items-center" *ngIf="isAuthAdmin">
+        <div class="d-flex align-items-center">
+          <div class="me-3">
+            <!-- Replace the below span with your profile icon -->
+            <!-- <span class="fa fa-user-circle fs-3 text-primary"></span> -->
+            <button class="btn btn-outline-secondary" style="min-width: 100px;" routerLink="/admin" (click)="admin()">Admin</button>
+          </div>
+          <div>
+            <button class="btn btn-outline-secondary" style="min-width: 100px;" (click)="logoutAdmin()">Log Out</button>
+          </div>
+        </div>
+      </div>
       
     </div>
   </div>

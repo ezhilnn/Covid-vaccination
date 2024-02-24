@@ -72,21 +72,23 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let cent of centerList1; let odd = odd">
+          <tr *ngFor="let cent of centerList; let odd = odd">
             <td>{{ cent.id }}</td>
             <td>{{ cent.name }}</td>
             <td>{{ cent.location }}</td>
             <td>{{ cent.totalSlots }}</td>
             <td>{{ cent.availableSlots }}</td>
             <td>
-              <button class="btn btn-success" [routerLink]="['/book',cent.id]">Book</button> 
+              <button class="btn btn-success" [routerLink]="['/book',cent.id]"  [disabled]="cent.availableSlots<=0">Book</button> 
               <!-- [disabled]="cent.availableSlots<=0" -->
             </td>
           </tr>
         </tbody>
       </table>
+      
     </div>
   </div>
+
   
   
   

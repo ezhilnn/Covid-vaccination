@@ -16,7 +16,7 @@
                     <form #adminForm="ngForm" (ngSubmit)="adminSubmit(adminForm)" class="text-center">
                     <div class="form-group">
                         <label for="id">Mobile Number</label>
-                        <input type="text" class="form-control mt-2 mb-2" name="id" ngModel #id="ngModel" placeholder="Enter Your Admin Id" required pattern="[0-9]*" (ngModelChange)="idErr($event)">
+                        <input type="text" class="form-control mt-2 mb-2" name="id" ngModel #id="ngModel" placeholder="Enter Your Mobile Number" required pattern="[0-9]*" (ngModelChange)="idErr($event)">
                         <div *ngIf="id.errors && id.touched" class="text-danger">
                             <div *ngIf="id.errors?.['required']">
                                 This Field is Required
@@ -53,6 +53,7 @@
                             </div>
                         </div>
                     </div>
+                    <div *ngIf="isActive">Password and number do not match</div>
                     <button class="btn btn-1 mt-2 mb-10" [disabled]="adminForm.invalid">Submit</button>
                     <p>Are you a Admin? <a routerLink="/admin-log">Admin</a></p>
                     <div class="mt-2">

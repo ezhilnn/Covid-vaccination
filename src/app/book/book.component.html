@@ -9,21 +9,22 @@
             <form #f="ngForm" (ngSubmit)="onSubmit(f)">
                 <div class="form-group">
                     <label for="id">Mobile Number</label>
-                    <input type="text" class="form-control mt-2 mb-2" name="id" ngModel #id="ngModel" placeholder="Enter Your Mobile number" required pattern="[0-9]*" (ngModelChange)="idErr($event)">
-                    <div *ngIf="id.errors && id.touched" class="text-danger">
-                        <div *ngIf="id.errors?.['required']">
+                    <input type="text" class="form-control mt-2 mb-2" name="mobile" id="mobile" ngModel #mobile="ngModel" placeholder="Enter Your Mobile number" required pattern="[0-9]*" (ngModelChange)="idErr($event)">
+
+                    <div *ngIf="mobile.errors && mobile.touched" class="text-danger">
+                        <div *ngIf="mobile.errors?.['required']">
                             This Field is Required
                         </div>
-                        <div *ngIf="id.errors?.['pattern']">
+                        <div *ngIf="mobile.errors?.['pattern']">
                             Enter Valid Mobile number
                         </div>
-                        <div *ngIf="id.errors?.['invalidId']">
+                        <div *ngIf="mobile.errors?.['invalidId']">
                             Enter Valid Mobile number
                         </div>
                     </div>
                     
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" ngModel #name="ngModel" required class="form-control mt-2 mb-2" pattern="[a-zA-Z ]*" maxlength="25" (ngModelChange)="nameErr($event)" placeholder="Enter Your Name">
                     <div *ngIf="name.errors && name.touched" class="text-danger">
@@ -37,11 +38,11 @@
                             Enter a valid name
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="form-group">
                     <label for="DOB">Date of Vaccination</label>
-                    <input type="date" class="form-control mt-2 mb-2" name="DOB" ngModel #DOB="ngModel" required  [min]="calculateMinDate()" [max]="calculateMaxDate()">
+                    <input type="date" class="form-control mt-2 mb-2" name="DOB" id="DOB" ngModel #DOB="ngModel" required  [min]="calculateMinDate()" [max]="calculateMaxDate()">
                 </div>
                 <div class="text-center">
                     <button class="btn btn-primary" [disabled]="f.invalid">Submit</button>

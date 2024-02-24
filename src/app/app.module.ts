@@ -22,6 +22,12 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BookComponent } from './book/book.component';
 import { AdminComponent } from './admin/admin.component';
+import { SubmittComponent } from './submitt/submitt.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CenterListComponent } from './center-list/center-list.component';
+import { AddCenterComponent } from './add-center/add-center.component';
+import { CitiSignupComponent } from './citi-signup/citi-signup.component';
+import { DummyComponent } from './dummy/dummy.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +49,18 @@ import { AdminComponent } from './admin/admin.component';
     SignUpComponent,
     ProfileComponent,
     BookComponent,
-    AdminComponent
+    AdminComponent,
+    SubmittComponent,
+    CenterListComponent,
+    AddCenterComponent,
+    CitiSignupComponent,
+    DummyComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
